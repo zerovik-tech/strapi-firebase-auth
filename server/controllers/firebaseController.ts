@@ -10,6 +10,7 @@ const firebaseController = {
   },
 
   async validateToken(ctx) {
+    console.log(ctx.request.body);
     ctx.body = await strapi
       .plugin("firebase-auth")
       .service("firebaseService")
