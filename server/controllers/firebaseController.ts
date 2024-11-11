@@ -10,7 +10,7 @@ const firebaseController = {
   },
 
   async validateToken(ctx) {
-    console.log(ctx.request.body);
+    console.log("validateToken from node package", ctx.request.body);
     ctx.body = await strapi
       .plugin("firebase-auth")
       .service("firebaseService")
