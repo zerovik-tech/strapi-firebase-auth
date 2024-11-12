@@ -1,5 +1,5 @@
 {
-  "name": "@swensonhe/strapi-plugin-firebase-auth",
+  "name": "strapi-plugin-firebase-auth",
   "version": "1.0.13",
   "description": "This is a Strapi plugin connect and authenticate users using firebase",
   "strapi": {
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/swensonhe/strapi-firebase-auth.git"
+    "url": "https://github.com/zerovik-tech/strapi-firebase-auth.git"
   },
   "dependencies": {
     "@strapi/design-system": "1.6.3",
