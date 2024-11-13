@@ -109,6 +109,8 @@ export default ({ strapi }: Params) => ({
 			if (userModel.hasOwnProperty("appleEmail")) {
 				query.$or.push({ appleEmail: decodedToken.email });
 			}
+		} else {
+			return null;
 		}
 
 		// Add phone number to query if available
@@ -222,6 +224,10 @@ export default ({ strapi }: Params) => ({
 			.plugin("firebase-auth")
 			.service("firebaseService")
 			.decodeIDToken(idToken);
+
+		if (!decodedToken.email && !decodedToken.phone_number) {
+			return ctx.badRequest("Email or phone number is required");
+		}
 
 		let user;
 

@@ -87,7 +87,8 @@
     "prepublish:latest": "npm run clean && npm run build && node build/setup-package.js",
     "copy-assets": "copyfiles -u 1 admin/src/assets/**/* build/admin/",
     "build": "tsc && npm run copy-assets",
-    "clean": "rm -rf build"
+    "clean": "rm -rf build",
+    "postinstall": "npm run build"
   },
   "license": "MIT"
 }
