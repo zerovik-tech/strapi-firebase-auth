@@ -1,5 +1,5 @@
 {
-  "name": "strapi-plugin-firebase-auth",
+  "name": "strapi-plugin-firebase-auth-zerovik",
   "version": "1.0.13",
   "description": "This is a Strapi plugin connect and authenticate users using firebase",
   "strapi": {
@@ -87,8 +87,7 @@
     "prepublish:latest": "npm run clean && npm run build && node build/setup-package.js",
     "copy-assets": "copyfiles -u 1 admin/src/assets/**/* build/admin/",
     "build": "tsc && npm run copy-assets",
-    "clean": "rm -rf build",
-    "postinstall": "npm run build"
+    "clean": "rm -rf build"
   },
   "license": "MIT"
 }
