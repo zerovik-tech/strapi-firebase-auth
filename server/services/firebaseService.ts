@@ -226,7 +226,14 @@ export default ({ strapi }: Params) => ({
 			.decodeIDToken(idToken);
 
 		if (!decodedToken.email && !decodedToken.phone_number) {
-			return ctx.badRequest("Email or phone number is required");
+			ctx.status = 400;
+			return {
+				error: {
+					status: 400,
+					message: "Email or phone number is required",
+				},
+			};
+			// return ctx.badRequest();
 		}
 
 		let user;
