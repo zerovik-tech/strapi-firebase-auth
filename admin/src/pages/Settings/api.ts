@@ -1,5 +1,6 @@
 import { getFetchClient } from "@strapi/helper-plugin";
-import pluginId from "../../pluginId";
+// import pluginId from "../../pluginId";
+let pluginId = "firebase-auth"
 
 export const restartServer = async () => {
   const url = `/${pluginId}/settings/restart`;
